@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		4AFC25E928000FDA000F5F22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC25E828000FDA000F5F22 /* AppDelegate.swift */; };
 		4AFC25EB28000FDA000F5F22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC25EA28000FDA000F5F22 /* SceneDelegate.swift */; };
-		4AFC25ED28000FDA000F5F22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC25EC28000FDA000F5F22 /* ViewController.swift */; };
 		4AFC25F028000FDA000F5F22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC25EE28000FDA000F5F22 /* Main.storyboard */; };
 		4AFC25F228000FE1000F5F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC25F128000FE1000F5F22 /* Assets.xcassets */; };
 		4AFC25F528000FE1000F5F22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AFC25F328000FE1000F5F22 /* LaunchScreen.storyboard */; };
 		4AFC260028000FE2000F5F22 /* EgymAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC25FF28000FE2000F5F22 /* EgymAppTests.swift */; };
 		4AFC260A28000FE2000F5F22 /* EgymAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC260928000FE2000F5F22 /* EgymAppUITests.swift */; };
 		4AFC260C28000FE2000F5F22 /* EgymAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC260B28000FE2000F5F22 /* EgymAppUITestsLaunchTests.swift */; };
+		4AFC261D28001272000F5F22 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC261C28001272000F5F22 /* NewsListViewController.swift */; };
+		4AFC261F280012B5000F5F22 /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC261E280012B5000F5F22 /* NewsListViewModel.swift */; };
+		4AFC2624280013CE000F5F22 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC2623280013CE000F5F22 /* NetworkService.swift */; };
+		4AFC2628280014BD000F5F22 /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC2627280014BD000F5F22 /* NewsListTableViewCell.swift */; };
+		4AFC262B280018C1000F5F22 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC262A280018C1000F5F22 /* NewsDetailViewController.swift */; };
+		4AFC262D280018E4000F5F22 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC262C280018E4000F5F22 /* NewsDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +44,6 @@
 		4AFC25E528000FDA000F5F22 /* EgymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EgymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFC25E828000FDA000F5F22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AFC25EA28000FDA000F5F22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4AFC25EC28000FDA000F5F22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AFC25EF28000FDA000F5F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AFC25F128000FE1000F5F22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AFC25F428000FE1000F5F22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		4AFC260528000FE2000F5F22 /* EgymAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EgymAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AFC260928000FE2000F5F22 /* EgymAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgymAppUITests.swift; sourceTree = "<group>"; };
 		4AFC260B28000FE2000F5F22 /* EgymAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgymAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AFC261C28001272000F5F22 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		4AFC261E280012B5000F5F22 /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
+		4AFC2623280013CE000F5F22 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4AFC2627280014BD000F5F22 /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		4AFC262A280018C1000F5F22 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4AFC262C280018E4000F5F22 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +109,10 @@
 		4AFC25E728000FDA000F5F22 /* EgymApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AFC262228001398000F5F22 /* Networking */,
+				4AFC2618280011FE000F5F22 /* ViewControllers */,
 				4AFC25E828000FDA000F5F22 /* AppDelegate.swift */,
 				4AFC25EA28000FDA000F5F22 /* SceneDelegate.swift */,
-				4AFC25EC28000FDA000F5F22 /* ViewController.swift */,
 				4AFC25EE28000FDA000F5F22 /* Main.storyboard */,
 				4AFC25F128000FE1000F5F22 /* Assets.xcassets */,
 				4AFC25F328000FE1000F5F22 /* LaunchScreen.storyboard */,
@@ -125,6 +136,42 @@
 				4AFC260B28000FE2000F5F22 /* EgymAppUITestsLaunchTests.swift */,
 			);
 			path = EgymAppUITests;
+			sourceTree = "<group>";
+		};
+		4AFC2618280011FE000F5F22 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC261928001212000F5F22 /* NewsListViewController */,
+				4AFC262928001889000F5F22 /* NewsDetailViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4AFC261928001212000F5F22 /* NewsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC261C28001272000F5F22 /* NewsListViewController.swift */,
+				4AFC261E280012B5000F5F22 /* NewsListViewModel.swift */,
+				4AFC2627280014BD000F5F22 /* NewsListTableViewCell.swift */,
+			);
+			name = NewsListViewController;
+			sourceTree = "<group>";
+		};
+		4AFC262228001398000F5F22 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC2623280013CE000F5F22 /* NetworkService.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		4AFC262928001889000F5F22 /* NewsDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC262A280018C1000F5F22 /* NewsDetailViewController.swift */,
+				4AFC262C280018E4000F5F22 /* NewsDetailViewModel.swift */,
+			);
+			name = NewsDetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AFC25ED28000FDA000F5F22 /* ViewController.swift in Sources */,
+				4AFC262B280018C1000F5F22 /* NewsDetailViewController.swift in Sources */,
 				4AFC25E928000FDA000F5F22 /* AppDelegate.swift in Sources */,
+				4AFC261F280012B5000F5F22 /* NewsListViewModel.swift in Sources */,
+				4AFC262D280018E4000F5F22 /* NewsDetailViewModel.swift in Sources */,
 				4AFC25EB28000FDA000F5F22 /* SceneDelegate.swift in Sources */,
+				4AFC2624280013CE000F5F22 /* NetworkService.swift in Sources */,
+				4AFC2628280014BD000F5F22 /* NewsListTableViewCell.swift in Sources */,
+				4AFC261D28001272000F5F22 /* NewsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
