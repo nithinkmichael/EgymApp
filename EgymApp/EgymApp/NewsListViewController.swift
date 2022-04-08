@@ -14,12 +14,37 @@ class NewsListViewController: UIViewController {
     var viewModel: NewsListViewModelProtocol = NewsListViewModel()
     private var spinner: UIActivityIndicatorView?
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        setupUI()
+        setupViewModel()
+        viewModel.fetchData()
+        title = viewModel.title
 
     }
+    
+    private func setupViewModel() {
+        viewModel.delegate = self
+    }
+
+    private func setupUI() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(NewsListViewController.handleRefresh), for: .valueChanged)
+        self.newsListTableView?.refreshControl = refreshControl
+    }
+
+    @objc private func handleRefresh() {
+        viewModel.refresh()
+        newsListTableView.reloadData()
+    }
+
 
 }
+
+
 
 
 extension NewsListViewController: NewsListViewDelegate {

@@ -53,15 +53,31 @@ protocol NewsListViewModelProtocol {
 
 final class NewsListViewModel {
     private let dispatchGroup = DispatchGroup()
+    private let nyTimesAPIClient: NYTimesAPIService
 
     let title: String
+
+    private var news: [News] = []
 
     weak var delegate: NewsListViewDelegate?
 
     init(
-        title: String = "Top Stories"
+        title: String = "Top Stories",
+        nyTimesAPIClient: NYTimesAPIService = NYTimesAPI.shared
+
     ) {
         self.title = title
+        self.nyTimesAPIClient = nyTimesAPIClient
+    }
+}
+
+private extension NewsListViewModel {
+    func itemAt(_ index: Int) -> News {
+        news[index]
+    }
+
+    func clearData() {
+        news.removeAll()
     }
 }
 
@@ -73,8 +89,19 @@ extension NewsListViewModel: NewsListViewModelProtocol {
     }
 
     func fetchData() {
+        
         delegate?.didStartFetchingData()
-  
+        dispatchGroup.enter()
+        nyTimesAPIClient.fetchNews { [weak self] result in
+            self?.dispatchGroup.leave()
+            switch result {
+            case .success(let newsdata):
+                self?.news = newsdata.results ?? []
+            case .failure(let error):
+                self?.clearData()
+                self?.delegate?.didFinishFetchingDataWith(error)
+            }
+        }
 
         dispatchGroup.notify(
             queue: .main,
@@ -85,11 +112,13 @@ extension NewsListViewModel: NewsListViewModelProtocol {
     }
 
     func numberOfItems() -> Int {
-        10
+        news.count
     }
 
     func newsListCellViewModelAt(_ index: Int) -> NewsListCellViewModel {
 
-        return NewsListCellViewModel(title: "test",imageUrl: "",author: "nithin")
+        let newsItem = itemAt(index)
+
+        return NewsListCellViewModel(title: newsItem.title ,imageUrl: "",author: newsItem.byline)
     }
 }

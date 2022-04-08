@@ -41,15 +41,12 @@ protocol NetworkService {
     ///     - completion: request response in form of `.success(Response)` and `.failure(Error)`
     func execute<T: Decodable>(
         urlRequest: URLRequest,
-        forceRefresh: Bool,
         completion: @escaping(NetworkResult<T>) -> Void
     )
 }
 
 final class NetworkManager {
     private let session: URLSession
-
-    private let cache = URLCache(memoryCapacity: 0, diskCapacity: 1024 * 1024)
 
     init(
         session: URLSession = URLSession(
@@ -65,37 +62,23 @@ final class NetworkManager {
 extension NetworkManager: NetworkService {
     func execute<T: Decodable>(
         urlRequest: URLRequest,
-        forceRefresh: Bool,
         completion: @escaping(NetworkResult<T>) -> Void
     ) {
 
-        if !forceRefresh, let cachedResponse = cache.cachedResponse(for: urlRequest) {
-            do {
-                let responseObject = try JSONDecoder().decode(T.self, from: cachedResponse.data)
-                completion(.success(responseObject))
-            } catch {
-                completion(.failure(.jsonConversionFailed))
-            }
-        } else {
-            let task = session.dataTask(with: urlRequest) { data, response , error in
-                if let error = error {
-                    completion(.failure(NetworkError.customError(error)))
-                } else if let data = data {
-                    do {
-                        let responseObject = try JSONDecoder().decode(T.self, from: data)
-                        if let response = response {
-                            let cachedData = CachedURLResponse(response: response, data: data)
-                            self.cache.storeCachedResponse(cachedData, for: urlRequest)
-                        }
-                        completion(.success(responseObject))
-                    } catch {
-                        completion(.failure(.jsonConversionFailed))
-                    }
-                } else {
-                    completion(.failure(.requestFailed))
+        let task = session.dataTask(with: urlRequest) { data, response , error in
+            if let error = error {
+                completion(.failure(NetworkError.customError(error)))
+            } else if let data = data {
+                do {
+                    let responseObject = try JSONDecoder().decode(T.self, from: data)
+                    completion(.success(responseObject))
+                } catch {
+                    completion(.failure(.jsonConversionFailed))
                 }
+            } else {
+                completion(.failure(.requestFailed))
             }
-            task.resume()
         }
+        task.resume()
     }
 }

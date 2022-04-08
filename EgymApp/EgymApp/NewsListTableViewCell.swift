@@ -8,9 +8,9 @@
 import UIKit
 
 struct NewsListCellViewModel {
-    let title: String
-    let imageUrl: String
-    let author: String
+    let title: String?
+    let imageUrl: String?
+    let author: String?
 }
 
 class NewsListTableViewCell: UITableViewCell {
