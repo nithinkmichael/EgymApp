@@ -46,8 +46,12 @@ class NewsListViewController: UIViewController {
 
 extension NewsListViewController: NewsListViewDelegate {
     func didFinishFetchingDataWith(_ error: Error) {
-        let alertViewController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        present(alertViewController, animated: true)
+        
+        DispatchQueue.main.async {
+            
+            let alertViewController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            self.present(alertViewController, animated: true)
+        }
     }
 
     func didFinishFetchingData() {

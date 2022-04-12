@@ -137,7 +137,7 @@ extension NewsListViewModel: NewsListViewModelProtocol {
     
     func newsDetailViewModelAt(_ index: Int) -> NewsDetailViewModel {
         let news = itemAt(index)
-        let multimedia = imageFor(news, .superJumbo)
+        let multimedia = imageFor(news, .threeByTwoSmallAt2X)
         return NewsDetailViewModel(title: news.title, description: news.abstract, author: news.byline, imageUrl: multimedia?.url, newsUrl: news.shortURL)
     }
 }
