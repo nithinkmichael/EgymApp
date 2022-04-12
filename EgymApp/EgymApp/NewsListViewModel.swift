@@ -49,6 +49,10 @@ protocol NewsListViewModelProtocol {
     ///     - index:  index of the cell
     func newsListCellViewModelAt(_ index: Int) -> NewsListCellViewModel
 
+    /// Return ViewModel for NewsDetailViewController
+    /// - Parameters:
+    ///     - index:  index of the news which detail view to be shown
+    func newsDetailViewModelAt(_ index: Int) -> NewsDetailViewModel
 }
 
 final class NewsListViewModel {
@@ -76,6 +80,13 @@ private extension NewsListViewModel {
         news[index]
     }
 
+    func imageFor(_ news: News,_ format:Format) -> Multimedia? {
+        if let multimedia = news.multimedia?.filter ({ $0.format == format }).first {
+            return multimedia
+        }
+        return nil
+    }
+    
     func clearData() {
         news.removeAll()
     }
@@ -117,8 +128,16 @@ extension NewsListViewModel: NewsListViewModelProtocol {
 
     func newsListCellViewModelAt(_ index: Int) -> NewsListCellViewModel {
 
-        let newsItem = itemAt(index)
+        let news = itemAt(index)
+        
+        let multimedia = imageFor(news, .threeByTwoSmallAt2X)
 
-        return NewsListCellViewModel(title: newsItem.title ,imageUrl: "",author: newsItem.byline)
+        return NewsListCellViewModel(title: news.title ,imageUrl: multimedia?.url ,author: news.byline)
+    }
+    
+    func newsDetailViewModelAt(_ index: Int) -> NewsDetailViewModel {
+        let news = itemAt(index)
+        let multimedia = imageFor(news, .superJumbo)
+        return NewsDetailViewModel(title: news.title, description: news.abstract, author: news.byline, imageUrl: multimedia?.url, newsUrl: news.shortURL)
     }
 }

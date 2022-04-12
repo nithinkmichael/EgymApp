@@ -21,7 +21,7 @@ class NewsListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         titleLabel.text = nil
         thumbnailImageView.image = nil
         authorLabel.text = nil
@@ -29,14 +29,14 @@ class NewsListTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func configureViewWith(_ viewModel: NewsListCellViewModel) {
+        
         titleLabel.text = viewModel.title
-        //thumbnailImageView.image =
+        thumbnailImageView.loadImage(fromUrl: viewModel.imageUrl ?? "")
         authorLabel.text = viewModel.author
+        
     }
     
 }

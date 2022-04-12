@@ -10,12 +10,9 @@ import UIKit
 class NewsListViewController: UIViewController {
 
     @IBOutlet private var newsListTableView: UITableView!
-    
     var viewModel: NewsListViewModelProtocol = NewsListViewModel()
     private var spinner: UIActivityIndicatorView?
 
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -101,5 +98,12 @@ extension NewsListViewController: UITableViewDataSource {
 extension NewsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+        let newsDetailViewModel = viewModel.newsDetailViewModelAt(indexPath.row)
+
+        let detailViewController = NewsDetailViewController.viewController(
+            viewModel: newsDetailViewModel
+        )
+
+        self.navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
