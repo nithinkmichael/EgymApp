@@ -25,6 +25,16 @@
 		4AFC2632280026AE000F5F22 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC2631280026AE000F5F22 /* NewsData.swift */; };
 		4AFC26352800A0C6000F5F22 /* NewsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC26342800A0C6000F5F22 /* NewsWebViewController.swift */; };
 		4AFC263A28055BA7000F5F22 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC263928055BA7000F5F22 /* UIImageView+Cache.swift */; };
+		4AFC263F28056B92000F5F22 /* Model+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC263E28056B92000F5F22 /* Model+helpers.swift */; };
+		4AFC264228057929000F5F22 /* NYTimesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC264128057929000F5F22 /* NYTimesAPITests.swift */; };
+		4AFC2645280579A4000F5F22 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC2644280579A4000F5F22 /* NetworkServiceMock.swift */; };
+		4AFC264728057A83000F5F22 /* NYTimesAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC264628057A83000F5F22 /* NYTimesAPIMock.swift */; };
+		4AFC264928057BD6000F5F22 /* NewsListViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC264828057BD6000F5F22 /* NewsListViewDelegateMock.swift */; };
+		4AFC264B28057C61000F5F22 /* NewsListViewModelProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC264A28057C61000F5F22 /* NewsListViewModelProtocolMock.swift */; };
+		4AFC264E28057DB0000F5F22 /* NewsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC264D28057DB0000F5F22 /* NewsListViewControllerTests.swift */; };
+		4AFC265028057E29000F5F22 /* NewsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC264F28057E29000F5F22 /* NewsListViewModelTests.swift */; };
+		4AFC265228057F86000F5F22 /* NewsDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC265128057F86000F5F22 /* NewsDetailViewControllerTests.swift */; };
+		4AFC265428058692000F5F22 /* NewsWebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFC265328058692000F5F22 /* NewsWebViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +77,16 @@
 		4AFC2631280026AE000F5F22 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 		4AFC26342800A0C6000F5F22 /* NewsWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebViewController.swift; sourceTree = "<group>"; };
 		4AFC263928055BA7000F5F22 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Cache.swift"; sourceTree = "<group>"; };
+		4AFC263E28056B92000F5F22 /* Model+helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+helpers.swift"; sourceTree = "<group>"; };
+		4AFC264128057929000F5F22 /* NYTimesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesAPITests.swift; sourceTree = "<group>"; };
+		4AFC2644280579A4000F5F22 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
+		4AFC264628057A83000F5F22 /* NYTimesAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesAPIMock.swift; sourceTree = "<group>"; };
+		4AFC264828057BD6000F5F22 /* NewsListViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewDelegateMock.swift; sourceTree = "<group>"; };
+		4AFC264A28057C61000F5F22 /* NewsListViewModelProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModelProtocolMock.swift; sourceTree = "<group>"; };
+		4AFC264D28057DB0000F5F22 /* NewsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewControllerTests.swift; sourceTree = "<group>"; };
+		4AFC264F28057E29000F5F22 /* NewsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModelTests.swift; sourceTree = "<group>"; };
+		4AFC265128057F86000F5F22 /* NewsDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		4AFC265328058692000F5F22 /* NewsWebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWebViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +140,7 @@
 				4AFC25E828000FDA000F5F22 /* AppDelegate.swift */,
 				4AFC25EA28000FDA000F5F22 /* SceneDelegate.swift */,
 				4AFC26302800262E000F5F22 /* Models */,
-				4AFC2618280011FE000F5F22 /* ViewControllers */,
+				4AFC2618280011FE000F5F22 /* Views */,
 				4AFC263828055775000F5F22 /* ViewModels */,
 				4AFC262228001398000F5F22 /* Networking */,
 				4AFC263B2805618D000F5F22 /* Extenstions */,
@@ -136,6 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				4AFC25FF28000FE2000F5F22 /* EgymAppTests.swift */,
+				4AFC263D28056B67000F5F22 /* Helpers */,
+				4AFC264C28057D70000F5F22 /* ViewControllers */,
+				4AFC2640280578F5000F5F22 /* Networking */,
+				4AFC26432805797A000F5F22 /* Mocks */,
 			);
 			path = EgymAppTests;
 			sourceTree = "<group>";
@@ -149,14 +173,14 @@
 			path = EgymAppUITests;
 			sourceTree = "<group>";
 		};
-		4AFC2618280011FE000F5F22 /* ViewControllers */ = {
+		4AFC2618280011FE000F5F22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4AFC261928001212000F5F22 /* NewsListViewController */,
 				4AFC262928001889000F5F22 /* NewsDetailViewController */,
 				4AFC26332800A08F000F5F22 /* NewsWebViewController */,
 			);
-			name = ViewControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4AFC261928001212000F5F22 /* NewsListViewController */ = {
@@ -165,7 +189,7 @@
 				4AFC261C28001272000F5F22 /* NewsListViewController.swift */,
 				4AFC2627280014BD000F5F22 /* NewsListTableViewCell.swift */,
 			);
-			name = NewsListViewController;
+			path = NewsListViewController;
 			sourceTree = "<group>";
 		};
 		4AFC262228001398000F5F22 /* Networking */ = {
@@ -174,7 +198,7 @@
 				4AFC2623280013CE000F5F22 /* NetworkService.swift */,
 				4AFC262E280020A8000F5F22 /* NYTimesAPI.swift */,
 			);
-			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		4AFC262928001889000F5F22 /* NewsDetailViewController */ = {
@@ -182,7 +206,7 @@
 			children = (
 				4AFC262A280018C1000F5F22 /* NewsDetailViewController.swift */,
 			);
-			name = NewsDetailViewController;
+			path = NewsDetailViewController;
 			sourceTree = "<group>";
 		};
 		4AFC26302800262E000F5F22 /* Models */ = {
@@ -190,7 +214,7 @@
 			children = (
 				4AFC2631280026AE000F5F22 /* NewsData.swift */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4AFC26332800A08F000F5F22 /* NewsWebViewController */ = {
@@ -198,7 +222,7 @@
 			children = (
 				4AFC26342800A0C6000F5F22 /* NewsWebViewController.swift */,
 			);
-			name = NewsWebViewController;
+			path = NewsWebViewController;
 			sourceTree = "<group>";
 		};
 		4AFC263828055775000F5F22 /* ViewModels */ = {
@@ -207,7 +231,7 @@
 				4AFC261E280012B5000F5F22 /* NewsListViewModel.swift */,
 				4AFC262C280018E4000F5F22 /* NewsDetailViewModel.swift */,
 			);
-			name = ViewModels;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		4AFC263B2805618D000F5F22 /* Extenstions */ = {
@@ -215,7 +239,45 @@
 			children = (
 				4AFC263928055BA7000F5F22 /* UIImageView+Cache.swift */,
 			);
-			name = Extenstions;
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
+		4AFC263D28056B67000F5F22 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC263E28056B92000F5F22 /* Model+helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4AFC2640280578F5000F5F22 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC264128057929000F5F22 /* NYTimesAPITests.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4AFC26432805797A000F5F22 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC2644280579A4000F5F22 /* NetworkServiceMock.swift */,
+				4AFC264628057A83000F5F22 /* NYTimesAPIMock.swift */,
+				4AFC264828057BD6000F5F22 /* NewsListViewDelegateMock.swift */,
+				4AFC264A28057C61000F5F22 /* NewsListViewModelProtocolMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4AFC264C28057D70000F5F22 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4AFC264D28057DB0000F5F22 /* NewsListViewControllerTests.swift */,
+				4AFC264F28057E29000F5F22 /* NewsListViewModelTests.swift */,
+				4AFC265128057F86000F5F22 /* NewsDetailViewControllerTests.swift */,
+				4AFC265328058692000F5F22 /* NewsWebViewControllerTests.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +430,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFC2645280579A4000F5F22 /* NetworkServiceMock.swift in Sources */,
+				4AFC264B28057C61000F5F22 /* NewsListViewModelProtocolMock.swift in Sources */,
 				4AFC260028000FE2000F5F22 /* EgymAppTests.swift in Sources */,
+				4AFC264928057BD6000F5F22 /* NewsListViewDelegateMock.swift in Sources */,
+				4AFC264228057929000F5F22 /* NYTimesAPITests.swift in Sources */,
+				4AFC264E28057DB0000F5F22 /* NewsListViewControllerTests.swift in Sources */,
+				4AFC265228057F86000F5F22 /* NewsDetailViewControllerTests.swift in Sources */,
+				4AFC265028057E29000F5F22 /* NewsListViewModelTests.swift in Sources */,
+				4AFC263F28056B92000F5F22 /* Model+helpers.swift in Sources */,
+				4AFC265428058692000F5F22 /* NewsWebViewControllerTests.swift in Sources */,
+				4AFC264728057A83000F5F22 /* NYTimesAPIMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
